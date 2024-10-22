@@ -3,16 +3,16 @@
 const express = require('express');
 const serverless = require('serverless-http');
 
-const router = express.Router();
 const app = express();
+const router = express.Router();
 
 // First GET route
-app.get('/api/hello', (req, res) => {
+router.get('/hello', (req, res) => {
   res.json({ message: 'Hello, World!' });
 });
 
 // Second GET route
-app.get('/api/goodbye', (req, res) => {
+router.get('/goodbye', (req, res) => {
   res.json({ message: 'Goodbye, World!' });
 });
 
