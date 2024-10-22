@@ -15,4 +15,7 @@ app.get('/api/goodbye', (req, res) => {
   res.json({ message: 'Goodbye, World!' });
 });
 
+// Use the router with a base path
+app.use('/.netlify/functions/api', router);
+
 module.exports.handler = serverless(app);
